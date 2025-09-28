@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculator | Jagdeep</title>
+
+  <!-- link to the external CSS file (same folder) -->
+  <link rel="stylesheet" href="CSS/Calculator_CSS.css">
+</head>
+<body>
+  <main class="calculator" aria-label="Basic Calculator">
+    <!-- read-only screen so user types via buttons/keyboard -->
+    <input id="display" class="screen" type="text" placeholder="0" readonly aria-live="polite"/>
+
+    <!-- all buttons (event handling is in JS) -->
+    <div class="keys" id="keys">
+      <button data-op="+">+</button>
+      <button data-op="-">−</button>
+      <button data-op="*">×</button>
+      <button data-op="/">÷</button>
+
+      <button data-num="7">7</button>
+      <button data-num="8">8</button>
+      <button data-num="9">9</button>
+
+      <button data-num="4">4</button>
+      <button data-num="5">5</button>
+      <button data-num="6">6</button>
+
+      <button data-num="1">1</button>
+      <button data-num="2">2</button>
+      <button data-num="3">3</button>
+
+      <button data-num="0" class="span-2">0</button>
+      <button data-dot=".">.</button>
+
+      <button data-ac class="muted">AC</button>
+      <button data-equals class="equals span-2">=</button>
+    </div>
+  </main>
+
+  <!-- external JS at the end for faster load -->
+  <script src="JS/Calculator_JavaScript.js"></script>
+</body>
+</html>
