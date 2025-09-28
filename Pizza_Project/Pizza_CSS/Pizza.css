@@ -1,0 +1,65 @@
+:root{
+  --bg:#f6f7fb; --card:#ffffff; --muted:#eef0f5; --ring:#ffe7c2;
+  --accent:#ff8c1a; --accent-ink:#4a2a00; --ok:#d9f7e8; --text:#14171a;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+
+.site-header{
+  background:linear-gradient(90deg,var(--accent),#ffb347);
+  color:#fff; padding:16px 20px; display:flex; align-items:center; justify-content:space-between;
+}
+.site-header h1{margin:0; font-weight:800; letter-spacing:.5px}
+.site-header h1 span{font-style:italic}
+.site-header nav a{
+  color:#fff; text-decoration:none; margin-left:16px; font-weight:600;
+}
+.site-header nav a:hover{ text-decoration:underline; }
+
+.container{
+  max-width:960px; margin:24px auto; padding:0 16px;
+  display:grid; gap:16px; grid-template-columns:1fr;
+}
+@media (min-width:900px){ .container{ grid-template-columns:2fr 1fr; } }
+
+.card{
+  background:var(--card); border-radius:16px; padding:16px 18px;
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+  border:1px dashed var(--ring);
+}
+.card h2{margin-top:0}
+
+fieldset{border:1px solid #e6e6e6; border-radius:12px; padding:12px 12px 8px; margin:12px 0}
+legend{padding:0 6px; font-weight:700}
+.grid{display:grid; grid-template-columns:repeat(3,1fr); gap:6px}
+.row{display:flex; gap:12px; flex-wrap:wrap}
+.qty,.name{flex:1 1 200px}
+
+input[type="text"],input[type="number"],select{
+  width:100%; padding:10px 12px; border:1px solid #d7d7d7; border-radius:10px; background:#fff;
+}
+
+.actions{display:flex; gap:10px; margin-top:12px; flex-wrap:wrap}
+button{
+  border:0; border-radius:12px; padding:12px 16px; cursor:pointer;
+  background:var(--muted); font-weight:700;
+}
+button#btnPrice{background:#e7f0ff}
+button#btnSubmit{background:var(--ok)}
+button.muted{background:#f3e9e9}
+button:hover{filter:brightness(.98)}
+button:active{transform:scale(.98)}
+
+.receipt{
+  margin-top:14px; border-radius:12px; background:#fafafa; padding:12px;
+  border:1px solid #eee; font-family:ui-monospace, SFMono-Regular, Menlo, monospace;
+  white-space:pre-wrap;
+}
+
+.site-footer{
+  text-align:center; padding:20px; color:#6b7280;
+}

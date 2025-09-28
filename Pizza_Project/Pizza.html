@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fantasy Pizza | Jagdeep</title>
+  <link rel="stylesheet" href="Pizza_CSS/Pizza.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Fantasy <span>Pizza</span></h1>
+    <nav>
+      <a href="#order">Order</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- ORDER CARD -->
+    <section id="order" class="card">
+      <h2>Create Your Pizza</h2>
+
+      <form id="pizzaForm" autocomplete="off">
+        <!-- SIZE -->
+        <fieldset>
+          <legend>Size</legend>
+          <label><input type="radio" name="size" value="small" checked> Small</label>
+          <label><input type="radio" name="size" value="medium"> Medium</label>
+          <label><input type="radio" name="size" value="large"> Large</label>
+          <label><input type="radio" name="size" value="xl"> XL</label>
+        </fieldset>
+
+        <!-- CRUST -->
+        <fieldset>
+          <legend>Crust</legend>
+          <select name="crust" id="crust">
+            <option value="regular">Regular</option>
+            <option value="thin">Thin</option>
+            <option value="stuffed">Cheese Stuffed (+$3)</option>
+            <option value="gf">Gluten-Free (+$2)</option>
+          </select>
+        </fieldset>
+
+        <!-- SAUCE -->
+        <fieldset>
+          <legend>Sauce</legend>
+          <label><input type="radio" name="sauce" value="tomato" checked> Classic Tomato</label>
+          <label><input type="radio" name="sauce" value="alfredo"> Alfredo</label>
+          <label><input type="radio" name="sauce" value="pesto"> Pesto</label>
+          <label><input type="radio" name="sauce" value="bbq"> BBQ</label>
+        </fieldset>
+
+        <!-- CHEESE -->
+        <fieldset>
+          <legend>Cheese</legend>
+          <label><input type="checkbox" name="cheese" value="mozzarella" checked> Mozzarella</label>
+          <label><input type="checkbox" name="cheese" value="cheddar"> Cheddar</label>
+          <label><input type="checkbox" name="cheese" value="feta"> Feta</label>
+          <label><input type="checkbox" name="cheese" value="vegan"> Vegan (+$2)</label>
+        </fieldset>
+
+        <!-- TOPPINGS -->
+        <fieldset>
+          <legend>Toppings (first 3 free, +$1 each after)</legend>
+          <div class="grid">
+            <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
+            <label><input type="checkbox" name="toppings" value="bacon"> Bacon</label>
+            <label><input type="checkbox" name="toppings" value="mushroom"> Mushroom</label>
+            <label><input type="checkbox" name="toppings" value="olive"> Olives</label>
+            <label><input type="checkbox" name="toppings" value="onion"> Onion</label>
+            <label><input type="checkbox" name="toppings" value="pepper"> Bell Pepper</label>
+            <label><input type="checkbox" name="toppings" value="jalapeno"> Jalapeño</label>
+            <label><input type="checkbox" name="toppings" value="pineapple"> Pineapple</label>
+            <label><input type="checkbox" name="toppings" value="chicken"> Chicken</label>
+          </div>
+        </fieldset>
+
+        <!-- QTY + NAME -->
+        <div class="row">
+          <label class="qty">
+            Quantity
+            <input type="number" id="qty" name="qty" min="1" value="1">
+          </label>
+          <label class="name">
+            Name for order
+            <input type="text" id="customer" name="customer" placeholder="Jagdeep">
+          </label>
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="actions">
+          <button type="button" id="btnPrice">Calculate Price</button>
+          <button type="submit" id="btnSubmit">Place Order</button>
+          <button type="reset" class="muted">Reset</button>
+        </div>
+      </form>
+
+      <div id="summary" class="receipt" aria-live="polite"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>Hand-tossed pies baked on stone. Customize everything —
+        size, crust, sauces, cheeses, and toppings. Built for this JavaScript assignment,
+        but tasty in spirit. 😋</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:orders@fantasypizza.example">orders@fantasypizza.example</a></p>
+      <p>Phone: (555) 555-1234</p>
+      <p>Hours: 11:00 – 22:00 daily</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">&copy; <span id="year"></span> Fantasy Pizza</footer>
+
+  <script src="Pizza_JavaScript/Pizza.js"></script>
+</body>
+</html>
